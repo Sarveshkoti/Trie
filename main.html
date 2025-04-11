@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trie Visualizer (Dark)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div class="container">
+    <h1>🌳 Trie Visualizer</h1>
+    <div class="autocomplete-wrapper">
+      <input 
+        type="text" 
+        id="wordInput" 
+        placeholder="Enter a word" 
+        oninput="showSuggestions()" 
+        autocomplete="on" 
+      />
+      <ul id="suggestions" class="suggestions-box"></ul>
+    </div>
+    <div class="buttons">
+      <button onclick="insertWord()">Insert</button>
+      <button onclick="searchWord()">Search</button>
+      <button onclick="deleteWord()">Delete</button>
+    </div>
+    <div>
+      <h2>Autocomplete</h2>
+      <input type="text" id="autocompleteInput" placeholder="Type to get suggestions">
+      <ul id="suggestionsList"></ul>
+  </div>
+  <div>
+    <button id="resetBtn">Reset Trie</button>
+    <div id="resetResult" class="result"></div>
+</div>
+
+    <div id="log"></div>
+    <h2>📜 Action History</h2>
+    <ul id="history"></ul>
+    <h2>🌐 Trie Structure</h2>
+    <div id="visualization"></div>
+  </div>
+</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
